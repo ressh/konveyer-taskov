@@ -8,6 +8,16 @@
 
 set -euo pipefail
 
+# Ключ можно держать в .env (строка ANTHROPIC_API_KEY=...) — подхватим сами
+if [ -z "${ANTHROPIC_API_KEY:-}" ] && [ -f .env ]; then
+    ANTHROPIC_API_KEY=$(grep -E '^ANTHROPIC_API_KEY=' .env | cut -d= -f2-)
+    export ANTHROPIC_API_KEY
+fi
+if [ -z "${ANTHROPIC_API_KEY:-}" ]; then
+    echo "Нет ключа: добавьте ANTHROPIC_API_KEY в .env или экспортируйте переменную."
+    exit 1
+fi
+
 BASE_BRANCH="${1:-main}"
 DIFF=$(git diff "$BASE_BRANCH"...HEAD)
 
