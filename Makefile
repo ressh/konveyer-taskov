@@ -1,6 +1,5 @@
 # ===== Конвейер тасков — базовые команды =====
 # make task T=KAN-12    взять задачу: ветка + worktree + Claude
-# make review           AI-ревью текущей ветки (Claude API, ключ в .env)
 # make pr               открыть Pull Request (для ревью Copilot)
 # make done T=KAN-12    влить ветку и прибрать за собой
 
@@ -13,9 +12,6 @@ task:
 	@cp .env ../wt-$(T)/.env 2>/dev/null || true
 	@echo "→ feature/$(T) готова в ../wt-$(T)"
 	cd ../wt-$(T) && claude "Возьми в работу задачу $(T). Работай по регламенту из CLAUDE.md: статусы в Jira, код, AI-ревью до Done."
-
-review:
-	./scripts/review.sh $(BASE)
 
 pr:
 	git push -u origin HEAD
