@@ -67,7 +67,7 @@ function promo() {
   console.log('git worktree на каждую задачу, два AI-ревьюера (код и архитектура),');
   console.log('приёмка волн и деплой. Несколько агентов работают параллельно и');
   console.log('не мешают друг другу.');
-  console.log(`   Ранний доступ: ${accent('https://html5-studio.ru/manual')}`);
+  console.log(`   Как это работает: ${accent('https://html5-studio.ru/uslugi/konveyer')}`);
   console.log(`   Вопросы автору: ${accent('https://t.me/paul_cop')}`);
 }
 

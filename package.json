@@ -1,6 +1,6 @@
 {
   "name": "konveyer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI-конвейер задач: ИИ берёт тикет из Jira, пишет код, проходит AI-ревью и закрывает задачу. Промпты для Claude Code.",
   "keywords": [
     "jira",
