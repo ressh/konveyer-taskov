@@ -1,0 +1,39 @@
+{
+  "name": "konveyer",
+  "version": "0.1.1",
+  "description": "AI-конвейер задач: ИИ берёт тикет из Jira, пишет код, проходит AI-ревью и закрывает задачу. Промпты для Claude Code.",
+  "keywords": [
+    "jira",
+    "claude",
+    "claude-code",
+    "ai-agent",
+    "ai-review",
+    "automation",
+    "workflow",
+    "konveyer"
+  ],
+  "homepage": "https://html5-studio.ru/kurs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ressh/konveyer-taskov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ressh/konveyer-taskov/issues"
+  },
+  "author": "html5-studio (https://html5-studio.ru)",
+  "license": "MIT",
+  "bin": {
+    "konveyer": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "prompts/",
+    "templates/",
+    "Makefile",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
